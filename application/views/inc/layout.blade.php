@@ -70,9 +70,9 @@
       <div class="row-fluid">
         <div class="span12">     
               <!-- BEGIN: Errors -->
-                @if (isset($errors))
-                  @foreach ($errors as $error)
-                      {{ Alert::error($error, false) }}    
+                @if (isset($alerts))
+                  @foreach ($alerts as $alert)
+                      {{ Alert::error($alert, false) }}    
                   @endforeach
                 @endif
             <!-- END: Errors -->

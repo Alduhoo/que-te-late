@@ -9,7 +9,7 @@ class Question_Controller extends Base_Controller {
 
 		if ($question == null)
 		{
-			$view_opts['errors'][] = '¡Por favor crea una pregunta para empezar!';
+			$view_opts['alerts'][] = '¡Por favor crea una pregunta para empezar!';
 			return View::make('question.create', $view_opts);
 		}
 
@@ -21,9 +21,9 @@ class Question_Controller extends Base_Controller {
 			$p[2] = 0;
 			$p[3] = 0;
 		} else {
-			$p[1] = ($question->count1 / $total) * 100;
-			$p[2] = ($question->count2 / $total) * 100;
-			$p[3] = 100 - $p[1] - $p[2];
+			$p[1] = ($question->count1 != 0) ? ($question->count1 / $total) * 100 : 0;
+			$p[2] = ($question->count2 != 0) ? ($question->count2 / $total) * 100 : 0;
+			$p[3] = ($question->count3 != 0) ? 100 - $p[1] - $p[2] : 0;
 		}
 
 		$view_opts['question'] = $question;
