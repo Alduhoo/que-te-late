@@ -53,7 +53,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKeyGoesHere!',
+	'key' => 'CHANGETHISKEY!',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -193,6 +193,32 @@ return array(
 		'URI'        	=> 'Laravel\\URI',
 		'Validator'  	=> 'Laravel\\Validator',
 		'View'       	=> 'Laravel\\View',
+
+
+		/*
+		 * Bootstrapper
+		 */
+
+		
+		'Alert'                 => 'Bootstrapper\\Alert',
+		'Badges'                => 'Bootstrapper\\Badges',
+		'Breadcrumbs'           => 'Bootstrapper\\Breadcrumbs',
+		'Buttons'               => 'Bootstrapper\\Buttons',
+		'ButtonGroup'           => 'Bootstrapper\\ButtonGroup',
+		'ButtonToolbar'         => 'Bootstrapper\\ButtonToolbar',
+		'Carousel'              => 'Bootstrapper\\Carousel',
+		'DropdownButton'        => 'Bootstrapper\\DropdownButton',
+		'Form'                  => 'Bootstrapper\\Form',
+		'Helpers'               => 'Bootstrapper\\Helpers',
+		'Icons'                 => 'Bootstrapper\\Icons',
+		'Labels'                => 'Bootstrapper\\Labels',
+		'Navbar'                => 'Bootstrapper\\Navbar',
+		'Navigation'            => 'Bootstrapper\\Navigation',
+		'Paginator'             => 'Bootstrapper\\Paginator',
+		'Progress'              => 'Bootstrapper\\Progress',
+		'SplitDropdownButton'   => 'Bootstrapper\\SplitDropdownButton',
+		'Tabbable'              => 'Bootstrapper\\Tabbable',
+		'Typeahead'             => 'Bootstrapper\\Typeahead',
 	),
 
 );

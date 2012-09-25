@@ -32,10 +32,16 @@
 |
 */
 
+/* Default Route
 Route::get('/', function()
 {
 	return View::make('home.index');
 });
+*/
+Route::any('/', 'question@random');
+Route::any('/question/(:num)', 'question@index');
+Route::get('/question/create', 'question@create');
+Route::post('/question/create', 'question@save');
 
 /*
 |--------------------------------------------------------------------------
@@ -109,3 +115,6 @@ Route::filter('auth', function()
 {
 	if (Auth::guest()) return Redirect::to('login');
 });
+
+// Route for Question_Controller
+Route::controller('question');
